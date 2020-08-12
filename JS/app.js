@@ -80,11 +80,10 @@ class Calculator {
     updateDisplay() {
 
         this.currentOperandTextElement.innerText =
-            this.getDisplayNumber(this.currentOperand) //not displays previous inner-text(issue)
+            this.getDisplayNumber(this.currentOperand) // displays previous inner-text(issue solved with grave accent)
 
         if (this.operation != null) {
-            this.previousOperandTextElement =
-                '${this.getDisplayNumber(this.previousOperand)} ${this.operation}'
+            this.previousOperandTextElement = `${this.getDisplayNumber(this.previousOperand)} ${this.operation}`
         } else {
             this.previousOperandTextElement = ''
         }
